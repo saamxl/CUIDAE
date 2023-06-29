@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuidaê</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+    <link href="https: //fonts.googleapis.com/css2?family= Roboto & family= Roboto+Slab:wght@400;500 & display =swap" rel="stylesheet">
+    <link href="https: //fonts.googleapis.com/css2?family= Roboto & família= Roboto+Slab:wght@300;400;500 && display =swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <style>
+      *{
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+    background-color: #F8F8FF;
+  }
+  /*Navbar*/
+  .retangulo {
+    box-sizing: border-box;
+    background: #f8f8ff;
+    border-radius: 0px 20px 20px 20px;
+    width: 100%;
+    height: 179px;
+    box-shadow: 0px 5px 4px 5px rgba(250, 229, 248, 1);
+    margin-top: -120px
+  }
+  .logo img{
+  width: 80px;
+  margin-left: 40px;
+  margin-top: 30px;
+  }
+  .topicos-nav ul{
+    flex: 1;
+    text-align: left;
+    margin-top: -60px;
+    margin-left: 200px;
+  }
+  .topicos-nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 40px;
+    font-size: 20px;
+  }
+  .topicos-nav ul li a{
+    text-decoration: none;
+    color: #811AA6;
+    font-family: 'Roboto Slab', serif;
+    position: relative;
+  }
+  .topicos-nav ul li a::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: #811AA6;
+    position: absolute;
+    left: 0;
+    bottom: 33px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.4s ease;
+  }
+  
+  .topicos-nav ul li a:hover::after {
+    transform: scaleX(1);
+  }
+  .iconenav {
+    position: absolute;
+    top: 49px;
+    left: 1110px;
+    color: #811AA6;
+    font-size: 22px;
+  }
+  .icon-link:hover {
+    color: #499FB9;
+  }
+  .button-nav {
+    font-family: 'Roboto Slab', serif;
+    margin-top: -92px;
+    margin-left: 1130px;
+  }
+  
+  .btn {
+    font-weight: bold;
+    width: 100px; 
+    height: 30px; 
+    background: #B9499F;
+    border: 2px solid #B9499F;
+    outline: none;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 14px; 
+    color: #ffff;
+    margin-left: 40px; 
+    margin-right: 5px;
+  }
+  .btn:hover {
+    background: #F8F8FF;
+    color: #B9499F;
+  }
+  .btn-registro {
+    font-weight: bold;
+    width: 115px; 
+    height: 32px; 
+    background: #B9499F;
+    border: 2px solid #B9499F;
+    outline: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 14px; 
+    color: #ffff;
+    margin-left: 30px; 
+    margin-right: 12px;
+  }
+  .btn-registro:hover {
+    background: #F8F8FF;
+    color: #B9499F;
+  }
+  /*Fim-Navbar*/
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .rectangle {
+    background-color: #B9499F;
+    width: 800px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 500px;
+    border-radius: 20px;
+  }
+  
+  .title-container {
+    position: absolute;
+    top: -30px; /* Ajuste o valor conforme necessário para o espaçamento vertical */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .title-container h2 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; /* Espaçamento entre o título e o small-rectangle */
+  }
+  
+  .title-container h2 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+
+  .small-rectangle {
+    background-color: white;
+    width: 200px;
+    height: 250px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .small-rectangle h1 {
+    font-family: "Roboto Slab", serif;
+    font-weight: bold;
+    font-size: larger;
+  }
+  
+  .small-rectangle p {
+    font-family: "Roboto Slab", serif;
+    font-weight: normal;
+  }
+  
+  
+  
+  /*InicioFooter*/
+  .footer{
+    margin-top: 1000px;
+    background-color: #499FB9;
+    width: 100%;
+    height: 200px;
+  }
+  .linha{
+      border-style: solid;
+      border-color: #ffff;
+      width: 100%;
+      height: 0;
+      border-width: 1px 0 0 0;
+      position: absolute;
+      top: 123%;
+  }
+  .nossami p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #ffff;
+    margin-left: 45px;
+    padding: 20px 0 0px 0;
+  }
+  .topicos {
+    list-style-type: none;
+    margin: -40px 0 0 350px;
+  }
+  
+  .topicos ul li {
+    padding: 0 60px 0 40px;
+    margin-left: 50px;
+    color: #ffff;
+    font-family: 'Roboto Slab', serif;
+    font-size: 22px;
+    display: inline;
+  }
+  .coluna1 ul{
+    list-style: none;
+    margin-top: 30px;
+    text-align: center;
+    margin-right: 500px;
+  }
+  
+  .coluna1 ul li{
+    margin-bottom: 10px;
+  }
+  
+  .coluna1 ul li a {
+    font-weight: lighter;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+  }
+  
+  .coluna1 ul li a:hover{
+    color: #9B46B9;
+  }
+  .coluna2 ul{
+    margin-left: 15px;
+    margin-top: -93px;
+    list-style: none;
+    text-align: center;
+  }
+  .coluna2 ul li{
+    margin-bottom: 10px;
+  }
+  .coluna2 ul li a {
+    font-weight: lighter;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+  }
+  .coluna2 ul li a:hover{
+    color: #9B46B9;
+  }
+  .coluna3 ul{
+    margin-left: 550px;
+    margin-top: -120px;
+    list-style: none;
+    text-align: center;
+  }
+  .coluna3 ul li{
+    margin-bottom: 10px;
+  }
+  .coluna3 ul li a {
+    font-weight: lighter;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px
+  }
+  .coluna3 ul li a:hover{
+    color: #9B46B9;
+  }
+  .icons {
+    margin-right: 1220px;
+    text-align: center;
+    margin-top: -75px;
+  }
+  
+  .icons a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #fff;
+    font-size: 26px;
+  }
+  
+  .icons a:hover {
+    color: #9B46B9;
+  }
+  .icons h2{
+    font-weight: lighter;
+    text-decoration: none;
+    font-family: 'Roboto Slab', serif;
+    color: #fff;
+    padding: 0 0 20px 0;
+  }
+  .direitos-autorais {
+    position: absolute;
+    bottom: -305px;
+    right: 14px;
+    color: #ffffff;
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+  }
+  /*FimFooter*/
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="img/Logo (1).png" alt="Logo da Cuidaê">
+            </div>
+            <div class="topicos-nav">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li ><a href="sobrenos.html">Sobre Nós</a></li>
+                <li ><a href="#">Serviços</a></li>
+                <li ><a href="faleconosco.html">Fale Conosco</a></li>
+            </ul>
+        </div>
+            <div class="iconenav">
+                <a href="#" class="icon-link">
+                <i class="fas fa-eye"></i>
+            </a>
+            </div>
+            <div class="retangulo"></div>
+            <div class="button-nav">
+                <button class="btn">Login</button>
+                <button class="btn-registro">Registre-se</button>
+            </div>
+        </div>
+        <!-- Fim-Navbar -->
+    </header>
+
+    <div class="rectangle">
+      <h1>Titulo</h1>
+      <div class="row">
+
+        <div class="small-rectangle">
+          <h1>Diária marcada com: Maisa</h1>
+          <hr>
+          <p>• Organização da Sala</p>
+          <p>• Organização dos Quartos</p>
+          <p>• Limpeza dos vidros</p>
+          <p>• Limpeza da Geladeira</p>
+        </div>
+        
+        <div class="small-rectangle">
+          <h1>Diária marcada com: Lina</h1>
+          <hr>
+          <p>• Organização da Sala</p>
+          <p>• Organização dos Quartos</p>
+          <p>• Limpeza dos vidros</p>
+          <p>• Limpeza da Geladeira</p>
+        </div>
+        <div class="small-rectangle">
+          <h1>Diária marcada com: Pedro</h1>
+          <hr>
+          <p>• Organização da Sala</p>
+          <p>• Organização dos Quartos</p>
+          <p>• Limpeza dos vidros</p>
+          <p>• Limpeza da Geladeira</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-rectangle">
+          <h1>Diária marcada com: Pedro</h1>
+          <hr>
+          <p>• Organização da Sala</p>
+          <p>• Organização dos Quartos</p>
+          <p>• Limpeza dos vidros</p>
+          <p>• Limpeza da Geladeira</p>
+        </div>
+        <div class="small-rectangle">
+          <h1>Diária marcada com: Lina</h1>
+          <hr>
+          <p>• Organização da Sala</p>
+          <p>• Organização dos Quartos</p>
+          <p>• Limpeza dos vidros</p>
+          <p>• Limpeza da Geladeira</p>
+        </div>
+      </div>
+    </div>
+    
+
+<!-- Começo-Footer -->
+   <footer>
+    <div class="footer">
+        <div class="linha"></div>
+        <div class="nossami">
+            <p>Nossa missão é cuidar e<br> valorizar o ser humano</p>
+        </div>
+        <div class="topicos">
+            <ul>
+                <li>Suporte</li>
+                <li>Comunidade</li>
+                <li>Regras</li>
+            </ul>
+        </div>
+        <div class="coluna1">
+            <ul>
+                <li><a href="perguntas.html">Perguntas Frequentes</a></li>
+                <li><a href="central.html">Central de Ajuda</a></li>
+                <li><a href="contatos.html">Contatos</a></li>
+            </ul>
+        </div>
+        <div class="coluna2">
+            <ul>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="agendamentos.html">Agendamentos</a></li>
+                <li><a href="perfil.html">Meu Perfil</a></li>
+                <li><a href="sobrenos.html">Sobre Nós</a></li>
+            </ul>
+        </div>
+        <div class="coluna3">
+            <ul>
+                <li><a href="politica.html">Política de Privacidade</a></li>
+                <li><a href="termos.html">Termos de Uso</a></li>
+                <li><a href="avisos.html">Avisos Legais</a></li>
+            </ul>
+        </div>
+        <div class="icons">
+                <h2>Siga Nós</h2>
+                <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="icon"><i class="fab fa-facebook"></i></a>
+        </div>
+        <div class="direitos-autorais">
+            <p>&copy; Cuidaê International Ltda.2023</p>
+        </div>
+    </div>
+   </footer>
+   <!-- Fim-Footer -->
+   </body>
+   </html>
